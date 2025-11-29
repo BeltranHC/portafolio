@@ -881,3 +881,75 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+/* ===================================
+   MUSIC PLAYER
+   =================================== */
+const musicBtn = document.getElementById('musicBtn');
+const bgMusic = document.getElementById('bgMusic');
+const musicTooltip = document.querySelector('.music-tooltip');
+
+if (musicBtn && bgMusic) {
+    // Configurar volumen inicial
+    bgMusic.volume = 0.5;
+    
+    // Intentar reproducir automáticamente
+    const playMusic = () => {
+        bgMusic.play().then(() => {
+            musicBtn.classList.add('playing');
+            if (musicTooltip) {
+                musicTooltip.textContent = 'Click para pausar';
+            }
+        }).catch(error => {
+            console.log('Autoplay bloqueado, esperando interacción del usuario');
+        });
+    };
+    
+    // Intentar reproducir inmediatamente
+    playMusic();
+    
+    // Si el autoplay falla, reproducir en la primera interacción
+    const startOnInteraction = () => {
+        if (bgMusic.paused) {
+            playMusic();
+        }
+        document.removeEventListener('click', startOnInteraction);
+        document.removeEventListener('scroll', startOnInteraction);
+        document.removeEventListener('keydown', startOnInteraction);
+        document.removeEventListener('touchstart', startOnInteraction);
+    };
+    
+    document.addEventListener('click', startOnInteraction);
+    document.addEventListener('scroll', startOnInteraction);
+    document.addEventListener('keydown', startOnInteraction);
+    document.addEventListener('touchstart', startOnInteraction);
+    
+    // Botón para toggle manual
+    musicBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (bgMusic.paused) {
+            bgMusic.play().then(() => {
+                musicBtn.classList.add('playing');
+                if (musicTooltip) {
+                    musicTooltip.textContent = 'Click para pausar';
+                }
+            });
+        } else {
+            bgMusic.pause();
+            musicBtn.classList.remove('playing');
+            if (musicTooltip) {
+                musicTooltip.textContent = 'Click para reproducir música';
+            }
+        }
+    });
+    
+    // Control de volumen con scroll sobre el botón
+    musicBtn.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        if (e.deltaY < 0) {
+            bgMusic.volume = Math.min(1, bgMusic.volume + 0.1);
+        } else {
+            bgMusic.volume = Math.max(0, bgMusic.volume - 0.1);
+        }
+    });
+}

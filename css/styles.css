@@ -1997,6 +1997,162 @@ body.light-mode .theme-toggle .fa-moon {
 }
 
 /* ===================================
+   MUSIC PLAYER
+   =================================== */
+.music-player {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+}
+
+.music-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 25px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.music-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 35px rgba(212, 175, 55, 0.5);
+}
+
+.music-btn:hover::before {
+    opacity: 1;
+}
+
+.music-btn i {
+    font-size: 1.3rem;
+    color: var(--bg-primary);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.music-btn.playing i {
+    display: none;
+}
+
+.music-waves {
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3px;
+    height: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.music-btn.playing .music-waves {
+    display: flex;
+}
+
+.music-waves span {
+    width: 4px;
+    background: var(--bg-primary);
+    border-radius: 2px;
+    animation: musicWave 0.8s ease-in-out infinite;
+}
+
+.music-waves span:nth-child(1) {
+    height: 8px;
+    animation-delay: 0s;
+}
+
+.music-waves span:nth-child(2) {
+    height: 16px;
+    animation-delay: 0.1s;
+}
+
+.music-waves span:nth-child(3) {
+    height: 12px;
+    animation-delay: 0.2s;
+}
+
+.music-waves span:nth-child(4) {
+    height: 18px;
+    animation-delay: 0.3s;
+}
+
+@keyframes musicWave {
+    0%, 100% {
+        transform: scaleY(0.5);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+}
+
+.music-tooltip {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 10px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.music-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    border: 6px solid transparent;
+    border-top-color: var(--bg-secondary);
+}
+
+.music-player:hover .music-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.music-btn.playing + .music-tooltip {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .music-player {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .music-btn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ===================================
    ANIMATIONS KEYFRAMES
    =================================== */
 @keyframes gradientPulse {
