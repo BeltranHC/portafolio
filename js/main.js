@@ -562,6 +562,13 @@ function initContactForm() {
         // Enviar a Formspree
         try {
             const formData = new FormData(form);
+            
+            // Debug: mostrar datos que se envían
+            console.log('Enviando formulario a:', form.action);
+            for (let [key, value] of formData.entries()) {
+                console.log(key + ': ' + value);
+            }
+            
             const response = await fetch(form.action, {
                 method: 'POST',
                 body: formData,
@@ -570,15 +577,20 @@ function initContactForm() {
                 }
             });
             
+            console.log('Response status:', response.status);
+            const data = await response.json();
+            console.log('Response data:', data);
+            
             submitBtn.classList.remove('loading');
             
             if (response.ok) {
                 showNotification('¡Mensaje enviado correctamente! Te responderé pronto.', 'success');
                 form.reset();
             } else {
-                showNotification('Hubo un error al enviar. Intenta de nuevo.', 'error');
+                showNotification('Error: ' + (data.error || 'Intenta de nuevo'), 'error');
             }
         } catch (error) {
+            console.log('Error:', error);
             submitBtn.classList.remove('loading');
             showNotification('Error de conexión. Verifica tu internet.', 'error');
         }
