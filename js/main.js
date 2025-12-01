@@ -562,14 +562,15 @@ function initContactForm() {
         // Enviar a Formspree
         try {
             const formData = new FormData(form);
+            const formspreeUrl = 'https://formspree.io/f/xblngzzv';
             
             // Debug: mostrar datos que se envían
-            console.log('Enviando formulario a:', form.action);
+            console.log('Enviando formulario a:', formspreeUrl);
             for (let [key, value] of formData.entries()) {
                 console.log(key + ': ' + value);
             }
             
-            const response = await fetch(form.action, {
+            const response = await fetch(formspreeUrl, {
                 method: 'POST',
                 body: formData,
                 headers: {
