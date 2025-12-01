@@ -559,16 +559,29 @@ function initContactForm() {
         const submitBtn = form.querySelector('.btn-submit');
         submitBtn.classList.add('loading');
         
-        // Simular envío (reemplazar con lógica real)
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        
-        submitBtn.classList.remove('loading');
-        
-        // Mostrar mensaje de éxito
-        showNotification('¡Mensaje enviado correctamente!', 'success');
-        
-        // Resetear formulario
-        form.reset();
+        // Enviar a Formspree
+        try {
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            submitBtn.classList.remove('loading');
+            
+            if (response.ok) {
+                showNotification('¡Mensaje enviado correctamente! Te responderé pronto.', 'success');
+                form.reset();
+            } else {
+                showNotification('Hubo un error al enviar. Intenta de nuevo.', 'error');
+            }
+        } catch (error) {
+            submitBtn.classList.remove('loading');
+            showNotification('Error de conexión. Verifica tu internet.', 'error');
+        }
     });
 }
 
