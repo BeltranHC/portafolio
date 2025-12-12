@@ -1200,6 +1200,32 @@ body.light-mode .theme-toggle .fa-moon {
     color: var(--text-muted);
 }
 
+/* Botón Ver Certificado */
+.btn-certificate {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: var(--accent-gradient);
+    color: var(--bg-primary);
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    box-shadow: var(--glow-primary);
+}
+
+.btn-certificate:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-intense);
+}
+
+.btn-certificate i {
+    font-size: 0.9rem;
+}
+
 /* ===================================
    TESTIMONIALS SECTION
    =================================== */
