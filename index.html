@@ -3,49 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio Profesional de Juni Dev - Desarrollador Full Stack especializado en React, Node.js, Python y Machine Learning">
-    <meta name="theme-color" content="#050508">
-    <title>Juni Dev | Desarrollador Full Stack & Data Scientist</title>
+    <meta name="description" content="Portfolio de Juni Dev - Full Stack Developer & Data Scientist especializado en crear soluciones tecnológicas innovadoras">
+    <meta name="theme-color" content="#0a0a0a">
     
-    <!-- Preconnect para rendimiento -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Juni Dev | Full Stack Developer">
+    <meta property="og:description" content="Desarrollador Full Stack & Data Scientist creando soluciones tecnológicas innovadoras">
+    <meta property="og:type" content="website">
+    
+    <title>Juni Dev | Full Stack Developer & Data Scientist</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Fuentes Premium -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Estilos -->
+    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="dark-mode">
-    <!-- Cursor personalizado -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Partículas de fondo -->
-    <div id="particles-js"></div>
-
-    <!-- Navegación -->
+<body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <span class="logo-text">Port<span class="accent">folio</span></span>
+                <span class="logo-accent">&lt;</span>JuniDev<span class="logo-accent">/&gt;</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Inicio</a></li>
                 <li><a href="#about" class="nav-link">Sobre Mí</a></li>
-                <li><a href="#skills" class="nav-link">Habilidades</a></li>
                 <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                <li><a href="#experience" class="nav-link">Certificaciones</a></li>
-                <li><a href="#testimonials" class="nav-link">Logros</a></li>
                 <li><a href="#contact" class="nav-link">Contacto</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-sun"></i>
                     <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
                 </button>
                 <button class="hamburger" id="hamburger" aria-label="Menú">
                     <span></span>
@@ -58,335 +51,248 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-gradient"></div>
-            <div class="hero-grid"></div>
-            <div class="hero-orbs">
-                <div class="orb orb-1"></div>
-                <div class="orb orb-2"></div>
-                <div class="orb orb-3"></div>
-            </div>
+        <div class="hero-bg">
+            <div class="hero-gradient hero-gradient-1"></div>
+            <div class="hero-gradient hero-gradient-2"></div>
         </div>
         <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting fade-in-up">
-                    <span class="code-tag\">&lt;dev&gt;</span> Hola, soy
-                </p>
-                <h1 class="hero-title fade-in-up delay-1">
-                    <span class="name">Juni Dev</span>
-                    <span class="title-line"></span>
-                </h1>
-                <h2 class="hero-subtitle fade-in-up delay-2">
-                    <span class="typing-text">Full Stack Developer & Data Scientist</span>
-                    <span class="typing-cursor">_</span>
-                </h2>
-                <p class="hero-description fade-in-up delay-3">
-                    Desarrollo <strong>soluciones tecnológicas</strong> que conectan la creatividad 
-                    con la funcionalidad. Especializado en arquitectura web, machine learning y 
-                    sistemas escalables que impulsan el crecimiento digital.
-                </p>
-                <div class="hero-cta fade-in-up delay-4">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>Ver Proyectos</span>
-                        <i class="fas fa-code"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <span>Hablemos</span>
-                        <i class="fas fa-terminal"></i>
-                    </a>
-                </div>
-                <div class="hero-social fade-in-up delay-5">
-                    <a href="https://github.com/BeltranHC" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/junior-huaraya/" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.instagram.com/jhack_hc?igsh=MXNuMDJsMnUxaTIycA==" class="social-link" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
+            <div class="hero-badge fade-in">
+                <span class="hero-badge-dot"></span>
+                Disponible para proyectos
             </div>
-            <div class="hero-image fade-in-up delay-3">
-                <div class="image-container">
-                    <div class="image-glow"></div>
-                    <div class="image-border"></div>
-                    <img src="img/port.png" alt="Foto profesional" class="profile-image">
-                    <div class="floating-elements">
-                        <div class="floating-badge badge-1">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="floating-badge badge-2">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <div class="floating-badge badge-3">
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
+            <p class="hero-greeting fade-in stagger-1"><i class="fas fa-terminal"></i> Hola, soy JuniDev</p>
+            <h1 class="hero-title fade-in stagger-2">
+                Full Stack Developer
+                <span class="hero-title-accent">& Data Scientist</span>
+            </h1>
+            <p class="hero-subtitle fade-in stagger-3">
+                Transformando ideas en código limpio y experiencias digitales
+            </p>
+            <p class="hero-description fade-in stagger-3">
+                Desarrollo soluciones tecnológicas que combinan diseño elegante con 
+                funcionalidad robusta. Especializado en web apps, machine learning 
+                y análisis de datos.
+            </p>
+            <div class="hero-cta fade-in stagger-4">
+                <a href="#projects" class="btn btn-primary">
+                    <span>Ver Proyectos</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="document/CV - Junior Beltran Huaraya Chipana.pdf" download class="btn btn-secondary">
+                    <span>Descargar CV</span>
+                    <i class="fas fa-download"></i>
+                </a>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll</span>
-        </div>
-    </section>
-
-    <!-- Sobre Mí -->
-    <section id="about" class="about section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Conóceme</span>
-                <h2 class="section-title">Sobre <span class="accent">Mí</span></h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-image reveal-left">
-                    <div class="about-img-container">
-                        <img src="img/port.png" alt="Juni Dev">
-                        <div class="experience-badge">
-                            <span class="years">1+</span>
-                            <span class="text">Año de Experiencia</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text reveal-right">
-                    <h3>Desarrollador apasionado por crear experiencias digitales únicas</h3>
-                    <p>
-                        Soy un desarrollador Full Stack con más de 1 año de experiencia en el desarrollo de aplicaciones web modernas y escalables. Mi enfoque se centra en crear soluciones que no solo funcionen perfectamente, sino que también ofrezcan una experiencia de usuario excepcional.
-                    </p>
-                    <p>
-                        Me especializo en tecnologías como React, Node.js, Python y bases de datos SQL/NoSQL. Siempre estoy aprendiendo y explorando nuevas tecnologías para mantenerme actualizado en este campo en constante evolución.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="12">0</span>
-                            <span class="stat-text">Proyectos Completados</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="4">0</span>
-                            <span class="stat-text">Clientes Satisfechos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="5">0</span>
-                            <span class="stat-text">Premios Ganados</span>
-                        </div>
-                    </div>
-                    <a href="document/CV - Junior Beltran Huaraya Chipana.pdf" download class="btn btn-primary">
-                        <span>Descargar CV</span>
-                        <i class="fas fa-download"></i>
-                    </a>
-                </div>
+            <div class="hero-socials fade-in stagger-5">
+                <a href="https://github.com/BeltranHC" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/junior-huaraya/" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/jhack_hc" target="_blank" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:juniorhuaraya@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Habilidades -->
-    <section id="skills" class="skills section">
+    <!-- About Section with Bento Grid -->
+    <section id="about" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Mis Conocimientos</span>
-                <h2 class="section-title">Habilidades <span class="accent">Técnicas</span></h2>
-                <div class="section-line"></div>
+                <span class="section-tag">// sobre mí</span>
+                <h2 class="section-title">Conoce mi perfil</h2>
             </div>
-            <div class="skills-content">
-                <div class="skills-categories">
-                    <button class="skill-filter active" data-filter="all">Todas</button>
-                    <button class="skill-filter" data-filter="frontend">Frontend</button>
-                    <button class="skill-filter" data-filter="backend">Backend</button>
-                    <button class="skill-filter" data-filter="tools">Herramientas</button>
+            
+            <div class="bento-grid">
+                <!-- About Card -->
+                <div class="bento-card bento-about fade-in">
+                    <img src="img/port.png" alt="Juni Dev" class="about-image">
+                    <div class="about-content">
+                        <h3>Junior Beltrán Huaraya</h3>
+                        <p>
+                            Desarrollador apasionado por crear soluciones tecnológicas innovadoras. 
+                            Con experiencia en desarrollo web full stack, ciencia de datos y machine learning. 
+                            Siempre explorando nuevas tecnologías para mantenerme actualizado.
+                        </p>
+                    </div>
                 </div>
-                <div class="skills-grid">
-                    <!-- Frontend -->
-                    <div class="skill-card reveal" data-category="frontend">
-                        <div class="skill-icon">
-                            <i class="fab fa-html5"></i>
-                        </div>
-                        <h4>HTML5</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="45"></div>
-                        </div>
-                        <span class="skill-percentage">45%</span>
+                
+                <!-- Stats Card -->
+                <div class="bento-card bento-stats fade-in">
+                    <span class="stat-number">12+</span>
+                    <span class="stat-label">Proyectos Completados</span>
+                </div>
+                
+                <!-- Tech Stack Card -->
+                <div class="bento-card bento-tech fade-in">
+                    <div class="bento-header">
+                        <h3><i class="fas fa-code"></i> Tech Stack</h3>
+                        <button class="btn-more" data-modal="tech-modal">Ver todo <i class="fas fa-arrow-right"></i></button>
                     </div>
-                    <div class="skill-card reveal" data-category="frontend">
-                        <div class="skill-icon">
-                            <i class="fab fa-css3-alt"></i>
-                        </div>
-                        <h4>CSS3/SASS</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="30"></div>
-                        </div>
-                        <span class="skill-percentage">30%</span>
-                    </div>
-                    <div class="skill-card reveal" data-category="frontend">
-                        <div class="skill-icon">
-                            <i class="fab fa-js"></i>
-                        </div>
-                        <h4>JavaScript</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="45"></div>
-                        </div>
-                        <span class="skill-percentage">45%</span>
-                    </div>
-                    <div class="skill-card reveal" data-category="frontend">
-                        <div class="skill-icon">
-                            <i class="fab fa-react"></i>
-                        </div>
-                        <h4>React</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="35"></div>
-                        </div>
-                        <span class="skill-percentage">35%</span>
-                    </div>
-                    <div class="skill-card reveal" data-category="frontend">
-                        <div class="skill-icon">
-                            <i class="fab fa-vuejs"></i>
-                        </div>
-                        <h4>Vue.js</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="55"></div>
-                        </div>
-                        <span class="skill-percentage">55%</span>
-                    </div>
-                    <!-- Backend -->
-                    <div class="skill-card reveal" data-category="backend">
-                        <div class="skill-icon">
-                            <i class="fab fa-node-js"></i>
-                        </div>
-                        <h4>Node.js</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="60"></div>
-                        </div>
-                        <span class="skill-percentage">60%</span>
-                    </div>
-                    <div class="skill-card reveal" data-category="backend">
-                        <div class="skill-icon">
+                    <div class="tech-grid">
+                        <div class="tech-item">
                             <i class="fab fa-python"></i>
+                            <span>Python</span>
                         </div>
-                        <h4>Python</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="70"></div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
                         </div>
-                        <span class="skill-percentage">70%</span>
-                    </div>
-                    <div class="skill-card reveal" data-category="backend">
-                        <div class="skill-icon">
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
                             <i class="fas fa-database"></i>
+                            <span>SQL</span>
                         </div>
-                        <h4>My SQL</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="50"></div>
-                        </div>
-                        <span class="skill-percentage">50%</span>
-                    </div>
-                    <div class="skill-card reveal" data-category="backend">
-                        <div class="skill-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h4>PostgreSQL</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="45"></div>
-                        </div>
-                        <span class="skill-percentage">45%</span>
-                    </div>
-                    <div class="skill-card reveal" data-category="backend">
-                        <div class="skill-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h4>Machine Learning</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="65"></div>
-                        </div>
-                        <span class="skill-percentage">65%</span>
-                    </div>
-                    <div class="skill-card reveal" data-category="backend">
-                        <div class="skill-icon">
-                            <i class="fab fa-r-project"></i>
-                        </div>
-                        <h4>R</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="60"></div>
-                        </div>
-                        <span class="skill-percentage">60%</span>
-                    </div>
-                    <!-- Tools -->
-                    <div class="skill-card reveal" data-category="tools">
-                        <div class="skill-icon">
+                        <div class="tech-item">
                             <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
                         </div>
-                        <h4>Git</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="80"></div>
-                        </div>
-                        <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="skill-card reveal" data-category="tools">
-                        <div class="skill-icon">
+                        <div class="tech-item">
                             <i class="fab fa-docker"></i>
+                            <span>Docker</span>
                         </div>
-                        <h4>Docker</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="70"></div>
+                        <div class="tech-item">
+                            <i class="fas fa-brain"></i>
+                            <span>ML</span>
                         </div>
-                        <span class="skill-percentage">70%</span>
                     </div>
-                    <div class="skill-card reveal" data-category="tools">
-                        <div class="skill-icon">
-                            <i class="fab fa-figma"></i>
-                        </div>
-                        <h4>Figma</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="60"></div>
-                        </div>
-                        <span class="skill-percentage">60%</span>
+                </div>
+                
+                <!-- Certifications Card -->
+                <div class="bento-card bento-certs fade-in">
+                    <div class="bento-header">
+                        <h3><i class="fas fa-certificate"></i> Certificaciones</h3>
+                        <button class="btn-more" data-modal="certs-modal">Ver todas <i class="fas fa-arrow-right"></i></button>
                     </div>
-                    <div class="skill-card reveal" data-category="tools">
-                        <div class="skill-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h4>Power BI</h4>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-progress="70"></div>
-                        </div>
-                        <span class="skill-percentage">70%</span>
+                    <div class="cert-list">
+                        <a href="certificadoos/DSA0010511799383.pdf" target="_blank" class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Data Scientist Associate</h4>
+                                <span>DataCamp</span>
+                            </div>
+                        </a>
+                        <a href="certificadoos/AIEDA0017104616948.pdf" target="_blank" class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>AI Engineer for Developers</h4>
+                                <span>DataCamp</span>
+                            </div>
+                        </a>
+                        <a href="certificadoos/DAA0014988419131.pdf" target="_blank" class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="cert-info">
+                                <h4>Data Analyst Associate</h4>
+                                <span>DataCamp</span>
+                            </div>
+                        </a>
                     </div>
+                </div>
+                
+                <!-- Experience Numbers -->
+                <div class="bento-card bento-experience fade-in">
+                    <div class="exp-item">
+                        <span class="exp-number">1+</span>
+                        <span class="exp-label">Año Exp.</span>
+                    </div>
+                    <div class="exp-item">
+                        <span class="exp-number">6</span>
+                        <span class="exp-label">Certificaciones</span>
+                    </div>
+                    <div class="exp-item">
+                        <span class="exp-number">4</span>
+                        <span class="exp-label">Clientes</span>
+                    </div>
+                    <div class="exp-item">
+                        <span class="exp-number">5</span>
+                        <span class="exp-label">Premios</span>
+                    </div>
+                </div>
+                
+                <!-- GitHub Card -->
+                <div class="bento-card bento-github fade-in">
+                    <div class="github-info">
+                        <i class="fab fa-github github-icon"></i>
+                        <div class="github-text">
+                            <h3>@BeltranHC</h3>
+                            <p>Mira mi código y proyectos open source</p>
+                        </div>
+                    </div>
+                    <a href="https://github.com/BeltranHC" target="_blank" class="github-link">
+                        Ver GitHub <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Proyectos -->
-    <section id="projects" class="projects section">
+    <!-- Projects Section -->
+    <section id="projects" class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Mi Trabajo</span>
-                <h2 class="section-title">Proyectos <span class="accent">Destacados</span></h2>
-                <div class="section-line"></div>
+                <span class="section-tag">// proyectos</span>
+                <h2 class="section-title">Trabajos destacados</h2>
             </div>
-            <div class="projects-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="web">Web Apps</button>
-                <button class="filter-btn" data-filter="ai">IA & ML</button>
-                <button class="filter-btn" data-filter="systems">Sistemas</button>
-            </div>
+            
             <div class="projects-grid">
-                <!-- Proyecto 1: E-Commerce Akemy -->
-                <div class="project-card reveal" data-category="web">
+                <!-- Project 1 -->
+                <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="E-Commerce Akemy">
+                        <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600&h=400&fit=crop" alt="Voces in Voz">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/BeltranHC/ecomerce_akemy" target="_blank" class="project-link" aria-label="Ver Código">
+                                <a href="https://github.com/BeltranHC/Vocesinvoz" target="_blank" class="project-link">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-info">
+                    <div class="project-content">
+                        <span class="project-category">AI / ML</span>
+                        <h3>Voces in Voz</h3>
+                        <p>Sistema de traducción de lenguaje de señas a voz usando visión artificial y machine learning.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>MediaPipe</span>
+                            <span>ML</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="E-Commerce Akemy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/BeltranHC/ecomerce_akemy" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web App</span>
                         <h3>E-Commerce Akemy</h3>
-                        <p>Plataforma E-commerce desarrollada para una empresa distribuidora de útiles escolares.</p>
+                        <p>Plataforma e-commerce completa para distribuidora de útiles escolares.</p>
                         <div class="project-tech">
                             <span>TypeScript</span>
                             <span>React</span>
@@ -394,43 +300,23 @@
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 2: Vocesinvoz -->
-                <div class="project-card reveal" data-category="ai">
+                
+                <!-- Project 3 -->
+                <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?w=600&h=400&fit=crop" alt="Vocesinvoz">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Dashboard Analytics">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/BeltranHC/Vocesinvoz" target="_blank" class="project-link" aria-label="Ver Código">
+                                <a href="https://github.com/BeltranHC/dashboard" target="_blank" class="project-link">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Voces in Voz</h3>
-                        <p>Sistema para traducción de lenguaje de señas a voz basado en visión artificial, MediaPipe y RandomForest.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>MediaPipe</span>
-                            <span>Machine Learning</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto 3: Dashboard -->
-                <div class="project-card reveal" data-category="web">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Dashboard">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/BeltranHC/dashboard" target="_blank" class="project-link" aria-label="Ver Código">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
+                    <div class="project-content">
+                        <span class="project-category">Web App</span>
                         <h3>Dashboard Analytics</h3>
-                        <p>Dashboard de diseños con visualización de datos y componentes interactivos.</p>
+                        <p>Dashboard interactivo con visualización de datos y componentes dinámicos.</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -438,21 +324,23 @@
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 4: INTRANET_JCM -->
-                <div class="project-card reveal" data-category="systems">
+                
+                <!-- Project 4 -->
+                <div class="project-card fade-in">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&h=400&fit=crop" alt="Intranet JCM">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/BeltranHC/INTRANET_JCM" target="_blank" class="project-link" aria-label="Ver Código">
+                                <a href="https://github.com/BeltranHC/INTRANET_JCM" target="_blank" class="project-link">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-info">
+                    <div class="project-content">
+                        <span class="project-category">Sistema</span>
                         <h3>Intranet JCM</h3>
-                        <p>Sistema de intranet para colegio aplicativo José Carlos Mariátegui con gestión académica.</p>
+                        <p>Sistema de intranet escolar con gestión académica completa.</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -460,21 +348,23 @@
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 5: Gestión Escolar -->
-                <div class="project-card reveal" data-category="systems">
+                
+                <!-- Project 5 -->
+                <div class="project-card fade-in">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop" alt="Gestión Escolar">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/BeltranHC/gestionescolar" target="_blank" class="project-link" aria-label="Ver Código">
+                                <a href="https://github.com/BeltranHC/gestionescolar" target="_blank" class="project-link">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-info">
+                    <div class="project-content">
+                        <span class="project-category">Sistema</span>
                         <h3>Gestión Escolar</h3>
-                        <p>Sistema completo de gestión escolar con módulos de estudiantes, docentes y calificaciones.</p>
+                        <p>Sistema completo de gestión escolar con módulos de estudiantes y calificaciones.</p>
                         <div class="project-tech">
                             <span>PHP</span>
                             <span>MySQL</span>
@@ -482,21 +372,23 @@
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 6: LibSys -->
-                <div class="project-card reveal" data-category="systems">
+                
+                <!-- Project 6 -->
+                <div class="project-card fade-in">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop" alt="LibSys">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://github.com/BeltranHC/libsys" target="_blank" class="project-link" aria-label="Ver Código">
+                                <a href="https://github.com/BeltranHC/libsys" target="_blank" class="project-link">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-info">
+                    <div class="project-content">
+                        <span class="project-category">Sistema</span>
                         <h3>LibSys</h3>
-                        <p>Sistema de biblioteca desarrollado como trabajo grupal de ingeniería de software.</p>
+                        <p>Sistema de biblioteca con gestión de préstamos y catálogo digital.</p>
                         <div class="project-tech">
                             <span>PHP</span>
                             <span>MySQL</span>
@@ -508,469 +400,312 @@
         </div>
     </section>
 
-    <!-- Experiencia y Educación -->
-    <section id="experience" class="experience section">
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Mi Trayectoria</span>
-                <h2 class="section-title">Certificaciones & <span class="accent">Educación</span></h2>
-                <div class="section-line"></div>
+                <span class="section-tag">// contacto</span>
+                <h2 class="section-title">¿Tienes un proyecto en mente?</h2>
             </div>
-            <div class="timeline-container">
-                <div class="timeline-tabs">
-                    <button class="timeline-tab active" data-tab="experience">
-                        <i class="fas fa-certificate"></i>
-                        Certificaciones
-                    </button>
-                    <button class="timeline-tab" data-tab="education">
-                        <i class="fas fa-graduation-cap"></i>
-                        Educación
-                    </button>
-                </div>
-                <div class="timeline-content">
-                    <!-- Certificaciones -->
-                    <div class="timeline experience-timeline active" id="experience-timeline">
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2025</span>
-                                <h3>Data Scientist Associate</h3>
-                                <h4>DataCamp</h4>
-                                <p>Certificación profesional en ciencia de datos, análisis estadístico y modelado predictivo.</p>
-                                <div class="timeline-tags">
-                                    <span>Data Science</span>
-                                    <span>Statistics</span>
-                                    <span>Analytics</span>
-                                </div>
-                                <a href="certificadoos/DSA0010511799383.pdf" target="_blank" class="btn-certificate">
-                                    <i class="fas fa-certificate"></i> Ver Certificado
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2025</span>
-                                <h3>AI Engineer for Developers Associate</h3>
-                                <h4>DataCamp</h4>
-                                <p>Certificación en desarrollo de soluciones de inteligencia artificial y machine learning.</p>
-                                <div class="timeline-tags">
-                                    <span>AI</span>
-                                    <span>Machine Learning</span>
-                                    <span>Deep Learning</span>
-                                </div>
-                                <a href="certificadoos/AIEDA0017104616948.pdf" target="_blank" class="btn-certificate">
-                                    <i class="fas fa-certificate"></i> Ver Certificado
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fas fa-chart-pie"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2025</span>
-                                <h3>Data Analyst Associate</h3>
-                                <h4>DataCamp</h4>
-                                <p>Certificación en análisis de datos, visualización y generación de insights empresariales.</p>
-                                <div class="timeline-tags">
-                                    <span>Data Analysis</span>
-                                    <span>Visualization</span>
-                                    <span>Business Intelligence</span>
-                                </div>
-                                <a href="certificadoos/DAA0014988419131.pdf" target="_blank" class="btn-certificate">
-                                    <i class="fas fa-certificate"></i> Ver Certificado
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2025</span>
-                                <h3>Python Data Associate</h3>
-                                <h4>DataCamp</h4>
-                                <p>Certificación en programación Python para análisis y manipulación de datos.</p>
-                                <div class="timeline-tags">
-                                    <span>Python</span>
-                                    <span>Pandas</span>
-                                    <span>NumPy</span>
-                                </div>
-                                <a href="certificadoos/PDA0018320664609.pdf" target="_blank" class="btn-certificate">
-                                    <i class="fas fa-certificate"></i> Ver Certificado
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2025</span>
-                                <h3>SQL Associate</h3>
-                                <h4>DataCamp</h4>
-                                <p>Certificación en gestión de bases de datos y consultas SQL avanzadas.</p>
-                                <div class="timeline-tags">
-                                    <span>SQL</span>
-                                    <span>Databases</span>
-                                    <span>Data Management</span>
-                                </div>
-                                <a href="certificadoos/SQA0017204901021.pdf" target="_blank" class="btn-certificate">
-                                    <i class="fas fa-certificate"></i> Ver Certificado
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fas fa-server"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2025</span>
-                                <h3>Associate Data Engineer in SQL</h3>
-                                <h4>DataCamp</h4>
-                                <p>Certificación en ingeniería de datos, pipelines ETL y arquitectura de datos con SQL.</p>
-                                <div class="timeline-tags">
-                                    <span>Data Engineering</span>
-                                    <span>ETL</span>
-                                    <span>SQL</span>
-                                </div>
-                                <a href="certificadoos/AEDS0010861512243.pdf" target="_blank" class="btn-certificate">
-                                    <i class="fas fa-certificate"></i> Ver Certificado
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fas fa-chart-bar"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2025</span>
-                                <h3>Análisis de Datos con Power BI</h3>
-                                <h4>Certificación Profesional</h4>
-                                <p>Certificación en visualización de datos y creación de dashboards interactivos con Power BI.</p>
-                                <div class="timeline-tags">
-                                    <span>Power BI</span>
-                                    <span>Dashboards</span>
-                                    <span>Data Visualization</span>
-                                </div>
-                                <a href="certificadoos/Certificado_Anlisis_de_Datos_con_Power_Bi.pdf" target="_blank" class="btn-certificate">
-                                    <i class="fas fa-certificate"></i> Ver Certificado
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2025</span>
-                                <h3>Desarrollo Back-End</h3>
-                                <h4>Certificación Profesional</h4>
-                                <p>Certificación en desarrollo de aplicaciones del lado del servidor y APIs.</p>
-                                <div class="timeline-tags">
-                                    <span>Back-End</span>
-                                    <span>APIs</span>
-                                    <span>Server-Side</span>
-                                </div>
-                                <a href="certificadoos/Certificado_Desarrollo_Back-End.pdf" target="_blank" class="btn-certificate">
-                                    <i class="fas fa-certificate"></i> Ver Certificado
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fab fa-js"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2025</span>
-                                <h3>JavaScript Essentials 1</h3>
-                                <h4>Cisco Networking Academy</h4>
-                                <p>Fundamentos de programación JavaScript, estructuras de datos y manipulación del DOM.</p>
-                                <div class="timeline-tags">
-                                    <span>JavaScript</span>
-                                    <span>Web Development</span>
-                                    <span>Frontend</span>
-                                </div>
-                                <a href="certificadoos/JavaScriptEssentials1Update20251206-29-yuftsj.pdf" target="_blank" class="btn-certificate">
-                                    <i class="fas fa-certificate"></i> Ver Certificado
-                                </a>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2025</span>
-                                <h3>Python Essentials 1</h3>
-                                <h4>Cisco Networking Academy</h4>
-                                <p>Fundamentos de programación Python, estructuras de control y funciones.</p>
-                                <div class="timeline-tags">
-                                    <span>Python</span>
-                                    <span>Programming</span>
-                                    <span>Fundamentals</span>
-                                </div>
-                                <a href="certificadoos/PythonEssentials1Update20251202-31-j9s5kl.pdf" target="_blank" class="btn-certificate">
-                                    <i class="fas fa-certificate"></i> Ver Certificado
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Educación -->
-                    <div class="timeline education-timeline" id="education-timeline">
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2022 - 2026</span>
-                                <h3>Ingeniería Estadística e Informática</h3>
-                                <h4>Universidad Nacional del Altiplano - Puno</h4>
-                                <p>Formación en desarrollo de software, ciencia de datos, estadística, inteligencia artificial y sistemas de información.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fas fa-school"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2015 - 2020</span>
-                                <h3>Educación Secundaria</h3>
-                                <h4>GUE José Antonio Encinas</h4>
-                                <p>Formación académica secundaria con énfasis en ciencias y matemáticas.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal">
-                            <div class="timeline-marker">
-                                <i class="fas fa-book-reader"></i>
-                            </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2010 - 2015</span>
-                                <h3>Educación Primaria</h3>
-                                <h4>IEP Miraflores</h4>
-                                <p>Educación primaria con formación integral en valores y conocimientos básicos.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Logros y Reconocimientos -->
-    <section id="testimonials" class="testimonials section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Mis Logros</span>
-                <h2 class="section-title">Logros & <span class="accent">Reconocimientos</span></h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="achievements-grid">
-                <!-- Logro Principal: Patentes -->
-                <div class="achievement-card reveal featured">
-                    <div class="achievement-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h3>10 Sistemas Patentados</h3>
-                        <h4>INDECOPI</h4>
-                        <p>Registro de propiedad intelectual de 10 sistemas de software desarrollados.</p>
-                    </div>
-                    <div class="achievement-badge">
-                        <span>🏆 Destacado</span>
-                    </div>
-                </div>
-                <!-- DATA FEST -->
-                <div class="achievement-card reveal">
-                    <div class="achievement-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h3>DATA FEST</h3>
-                        <h4>Universidad ESAN & BCP</h4>
-                        <p>Participación en competencia de ciencia de datos organizada por ESAN y el Banco BCP.</p>
-                    </div>
-                </div>
-                <!-- ACM ICPC -->
-                <div class="achievement-card reveal">
-                    <div class="achievement-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h3>ACM ICPC</h3>
-                        <h4>Universidad UNSA</h4>
-                        <p>Participación en el prestigioso concurso de programación competitiva ACM.</p>
-                    </div>
-                </div>
-                <!-- Concurso RStudio -->
-                <div class="achievement-card reveal">
-                    <div class="achievement-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h3>Concurso RStudio</h3>
-                        <h4>Facultad de Ing. Estadística e Informática</h4>
-                        <p>Competencia de análisis de datos y programación estadística en R.</p>
-                    </div>
-                </div>
-                <!-- Concursos Internos -->
-                <div class="achievement-card reveal">
-                    <div class="achievement-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h3>Concursos de Programación</h3>
-                        <h4>UNA Puno - Facultad</h4>
-                        <p>Ganador de múltiples concursos internos de programación en Python, R y más.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Hablemos</span>
-                <h2 class="section-title">Ponte en <span class="accent">Contacto</span></h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info reveal-left">
-                    <h3>¿Tienes un proyecto en mente?</h3>
-                    <p>Estoy disponible para proyectos freelance, colaboraciones o posiciones de tiempo completo. ¡No dudes en contactarme!</p>
-                    <div class="info-items">
-                        <div class="info-item">
-                            <div class="info-icon">
+            
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info fade-in">
+                    <h3>Hablemos de tu proyecto</h3>
+                    <p>
+                        Estoy disponible para proyectos freelance, colaboraciones 
+                        o simplemente para charlar sobre tecnología.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="info-text">
+                            <div class="method-info">
                                 <span>Email</span>
-                                <a href="mailto:huaraya0804@gmail.com">huaraya0804@gmail.com</a>
+                                <a href="mailto:juniorhuaraya@gmail.com">juniorhuaraya@gmail.com</a>
                             </div>
+                            <button class="copy-btn" data-copy="juniorhuaraya@gmail.com" title="Copiar email">
+                                <i class="fas fa-copy"></i>
+                            </button>
                         </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-phone"></i>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
                             </div>
-                            <div class="info-text">
-                                <span>Teléfono</span>
-                                <a href="tel:+51926465929">+51 926 465 929</a>
+                            <div class="method-info">
+                                <span>WhatsApp</span>
+                                <a href="https://wa.me/51926465929" target="_blank">+51 926 465 929</a>
                             </div>
+                            <a href="https://wa.me/51926465929" target="_blank" class="method-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon linkedin">
+                                <i class="fab fa-linkedin-in"></i>
                             </div>
-                            <div class="info-text">
-                                <span>Ubicación</span>
-                                <p>Puno, Perú</p>
+                            <div class="method-info">
+                                <span>LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/junior-huaraya/" target="_blank">junior-huaraya</a>
                             </div>
+                            <a href="https://www.linkedin.com/in/junior-huaraya/" target="_blank" class="method-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="contact-social">
-                        <a href="https://www.linkedin.com/in/junior-huaraya/" class="social-icon" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/BeltranHC" class="social-icon" aria-label="GitHub">
+                    
+                    <div class="contact-socials">
+                        <a href="https://github.com/BeltranHC" target="_blank" class="social-link" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.instagram.com/jhack_hc?igsh=MXNuMDJsMnUxaTIycA==" class="social-icon" aria-label="Instagram">
+                        <a href="https://www.linkedin.com/in/junior-huaraya/" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jhack_hc" target="_blank" class="social-link" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-                <form class="contact-form reveal-right" id="contactForm" action="https://formspree.io/f/xblngzzv" method="POST">
-                    <div class="form-group">
-                        <div class="input-wrapper">
-                            <input type="text" id="name" name="name" required placeholder=" ">
-                            <label for="name">Tu Nombre</label>
-                            <span class="input-border"></span>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper fade-in">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xblngzzv" method="POST">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Nombre</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-wrapper">
-                            <input type="email" id="email" name="email" required placeholder=" ">
-                            <label for="email">Tu Email</label>
-                            <span class="input-border"></span>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-wrapper">
-                            <input type="text" id="subject" name="subject" required placeholder=" ">
-                            <label for="subject">Asunto</label>
-                            <span class="input-border"></span>
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Asunto</label>
+                            <input type="text" id="subject" name="subject" placeholder="¿De qué quieres hablar?">
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-wrapper">
-                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-                            <label for="message">Tu Mensaje</label>
-                            <span class="input-border"></span>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment-alt"></i> Mensaje</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
                         </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">
-                        <span>Enviar Mensaje</span>
-                        <i class="fas fa-paper-plane"></i>
-                        <div class="btn-loader"></div>
-                    </button>
-                </form>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Enviar Mensaje</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <span class="logo-text">Port<span class="accent">folio</span></span>
-                    <p>Creando experiencias digitales excepcionales</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Inicio</a>
-                    <a href="#about">Sobre Mí</a>
-                    <a href="#projects">Proyectos</a>
-                    <a href="#contact">Contacto</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/BeltranHC" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/junior-huaraya/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/jhack_hc?igsh=MXNuMDJsMnUxaTIycA==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Portfolio. Todos los derechos reservados.</p>
-                <p>Desarrollado por <span class="dev-name"><i class="fas fa-code"></i> JuniDev <i class="fas fa-terminal"></i></span></p>
-            </div>
+        <div class="container">
+            <p>Diseñado y desarrollado con <span class="footer-accent"><i class="fas fa-heart"></i></span> por JuniDev © 2025</p>
         </div>
     </footer>
 
-    <!-- Music Player -->
-    <div class="music-player" id="musicPlayer">
-        <audio id="bgMusic" loop>
-            <source src="music/Tiësto & KSHMR feat. Vassy - Secrets (Official Music Video).mp3" type="audio/mpeg">
-        </audio>
-        <button class="music-btn" id="musicBtn" aria-label="Reproducir música">
-            <i class="fas fa-music" id="musicIcon"></i>
-            <div class="music-waves">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- Modal: Tech Stack -->
+    <div class="modal" id="tech-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-code"></i> Tech Stack Completo</h3>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
             </div>
-        </button>
-        <div class="music-tooltip">Click para reproducir música</div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h4><i class="fas fa-laptop-code"></i> Frontend</h4>
+                    <div class="modal-tech-grid">
+                        <div class="modal-tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            <div class="tech-level" data-level="45"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3/SASS</span>
+                            <div class="tech-level" data-level="30"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                            <div class="tech-level" data-level="45"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                            <div class="tech-level" data-level="35"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fab fa-vuejs"></i>
+                            <span>Vue.js</span>
+                            <div class="tech-level" data-level="55"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-server"></i> Backend & Data</h4>
+                    <div class="modal-tech-grid">
+                        <div class="modal-tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                            <div class="tech-level" data-level="60"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="tech-level" data-level="70"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                            <div class="tech-level" data-level="50"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                            <div class="tech-level" data-level="45"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fab fa-r-project"></i>
+                            <span>R</span>
+                            <div class="tech-level" data-level="60"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Machine Learning</span>
+                            <div class="tech-level" data-level="65"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h4><i class="fas fa-tools"></i> Herramientas</h4>
+                    <div class="modal-tech-grid">
+                        <div class="modal-tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                            <div class="tech-level" data-level="80"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                            <div class="tech-level" data-level="70"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                            <div class="tech-level" data-level="60"></div>
+                        </div>
+                        <div class="modal-tech-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Power BI</span>
+                            <div class="tech-level" data-level="70"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Modal: Certificaciones -->
+    <div class="modal" id="certs-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-certificate"></i> Todas mis Certificaciones</h3>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="certs-grid">
+                    <a href="certificadoos/DSA0010511799383.pdf" target="_blank" class="cert-card">
+                        <div class="cert-card-icon"><i class="fas fa-brain"></i></div>
+                        <div class="cert-card-info">
+                            <h4>Data Scientist Associate</h4>
+                            <span>DataCamp</span>
+                            <p>Certificación en ciencia de datos, análisis estadístico y modelado predictivo.</p>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </a>
+                    <a href="certificadoos/AIEDA0017104616948.pdf" target="_blank" class="cert-card">
+                        <div class="cert-card-icon"><i class="fas fa-robot"></i></div>
+                        <div class="cert-card-info">
+                            <h4>AI Engineer for Developers</h4>
+                            <span>DataCamp</span>
+                            <p>Desarrollo de soluciones de IA y machine learning.</p>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </a>
+                    <a href="certificadoos/DAA0014988419131.pdf" target="_blank" class="cert-card">
+                        <div class="cert-card-icon"><i class="fas fa-chart-pie"></i></div>
+                        <div class="cert-card-info">
+                            <h4>Data Analyst Associate</h4>
+                            <span>DataCamp</span>
+                            <p>Análisis de datos, visualización y business intelligence.</p>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </a>
+                    <a href="certificadoos/PDA0018320664609.pdf" target="_blank" class="cert-card">
+                        <div class="cert-card-icon"><i class="fab fa-python"></i></div>
+                        <div class="cert-card-info">
+                            <h4>Python Data Associate</h4>
+                            <span>DataCamp</span>
+                            <p>Programación Python para análisis y manipulación de datos.</p>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </a>
+                    <a href="certificadoos/SQA0017204901021.pdf" target="_blank" class="cert-card">
+                        <div class="cert-card-icon"><i class="fas fa-database"></i></div>
+                        <div class="cert-card-info">
+                            <h4>SQL Associate</h4>
+                            <span>DataCamp</span>
+                            <p>Gestión de bases de datos y consultas SQL avanzadas.</p>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </a>
+                    <a href="certificadoos/AEDS0010861512243.pdf" target="_blank" class="cert-card">
+                        <div class="cert-card-icon"><i class="fas fa-server"></i></div>
+                        <div class="cert-card-info">
+                            <h4>Data Engineer in SQL</h4>
+                            <span>DataCamp</span>
+                            <p>Ingeniería de datos, pipelines ETL y arquitectura.</p>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </a>
+                    <a href="certificadoos/Certificado_Anlisis_de_Datos_con_Power_Bi.pdf" target="_blank" class="cert-card">
+                        <div class="cert-card-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div class="cert-card-info">
+                            <h4>Análisis con Power BI</h4>
+                            <span>Certificación Profesional</span>
+                            <p>Dashboards interactivos y visualización de datos.</p>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </a>
+                    <a href="certificadoos/Certificado_Desarrollo_Back-End.pdf" target="_blank" class="cert-card">
+                        <div class="cert-card-icon"><i class="fas fa-code"></i></div>
+                        <div class="cert-card-info">
+                            <h4>Desarrollo Back-End</h4>
+                            <span>Certificación Profesional</span>
+                            <p>Desarrollo de aplicaciones del lado del servidor y APIs.</p>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </a>
+                    <a href="certificadoos/JavaScriptEssentials1Update20251206-29-yuftsj.pdf" target="_blank" class="cert-card">
+                        <div class="cert-card-icon"><i class="fab fa-js"></i></div>
+                        <div class="cert-card-info">
+                            <h4>JavaScript Essentials 1</h4>
+                            <span>Cisco Networking Academy</span>
+                            <p>Fundamentos de JavaScript y manipulación del DOM.</p>
+                        </div>
+                        <span class="cert-year">2025</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>
