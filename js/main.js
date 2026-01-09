@@ -21,95 +21,149 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ===================================
-   PARTÍCULAS DE FONDO
+   PARTÍCULAS DE FONDO - TEMA CÓDIGO
    =================================== */
 function initParticles() {
-    if (typeof particlesJS !== 'undefined') {
-        particlesJS('particles-js', {
-            particles: {
-                number: {
-                    value: 80,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: '#d4af37'
-                },
-                shape: {
-                    type: 'circle'
-                },
-                opacity: {
-                    value: 0.3,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 2,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: '#d4af37',
-                    opacity: 0.1,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 1,
-                    direction: 'none',
-                    random: true,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false,
-                    attract: {
-                        enable: true,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: 'grab'
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: 'push'
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 140,
-                        line_linked: {
-                            opacity: 0.5
-                        }
-                    },
-                    push: {
-                        particles_nb: 4
-                    }
-                }
-            },
-            retina_detect: true
-        });
+    // Crear efecto de lluvia de código tipo Matrix
+    const canvas = document.createElement('canvas');
+    canvas.id = 'code-rain';
+    canvas.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.15;
+        pointer-events: none;
+    `;
+    
+    const particlesContainer = document.getElementById('particles-js');
+    if (particlesContainer) {
+        particlesContainer.replaceWith(canvas);
+    } else {
+        document.body.prepend(canvas);
     }
+    
+    const ctx = canvas.getContext('2d');
+    
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    
+    // Caracteres de programación
+    const codeChars = [
+        '<>', '/>', '{}', '[]', '()', '=>', '===', '!=', '++', '--',
+        'if', 'for', 'let', 'const', 'var', 'fn', 'def', 'class',
+        '0', '1', '</', '/>', '&&', '||', '/*', '*/', '//', '##',
+        'npm', 'git', 'api', 'jsx', 'tsx', 'css', 'html', 'py',
+        '<?', '?>', '<%', '%>', '{{', '}}', '<?=', '::',
+        'return', 'async', 'await', 'import', 'export', 'from',
+        '< >', '{ }', '[ ]', '( )', '$ ', '# ', '@ ', '& ',
+    ];
+    
+    const fontSize = 14;
+    const columns = Math.floor(canvas.width / (fontSize * 2));
+    const drops = Array(columns).fill(1);
+    const chars = Array(columns).fill('');
+    
+    // Asignar caracteres aleatorios
+    for (let i = 0; i < columns; i++) {
+        chars[i] = codeChars[Math.floor(Math.random() * codeChars.length)];
+    }
+    
+    function draw() {
+        // Fondo semi-transparente para efecto de estela
+        ctx.fillStyle = 'rgba(10, 14, 23, 0.08)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Color azulino con variación
+        ctx.font = `${fontSize}px 'JetBrains Mono', 'Fira Code', monospace`;
+        
+        for (let i = 0; i < drops.length; i++) {
+            // Variación de color azulino
+            const hue = 210 + Math.random() * 20;
+            const lightness = 50 + Math.random() * 20;
+            ctx.fillStyle = `hsla(${hue}, 80%, ${lightness}%, 0.9)`;
+            
+            const x = i * fontSize * 2;
+            const y = drops[i] * fontSize;
+            
+            ctx.fillText(chars[i], x, y);
+            
+            // Resetear drop al llegar abajo o aleatoriamente
+            if (y > canvas.height && Math.random() > 0.98) {
+                drops[i] = 0;
+                chars[i] = codeChars[Math.floor(Math.random() * codeChars.length)];
+            }
+            
+            drops[i]++;
+        }
+    }
+    
+    setInterval(draw, 50);
+    
+    // Agregar partículas flotantes adicionales
+    addFloatingSymbols();
+}
+
+function addFloatingSymbols() {
+    const symbols = ['<', '>', '{', '}', '/', '=', ';', '(', ')', '[', ']'];
+    const container = document.createElement('div');
+    container.className = 'floating-code-symbols';
+    container.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        overflow: hidden;
+    `;
+    
+    for (let i = 0; i < 20; i++) {
+        const symbol = document.createElement('span');
+        symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        symbol.style.cssText = `
+            position: absolute;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: ${12 + Math.random() * 16}px;
+            color: rgba(74, 158, 255, ${0.1 + Math.random() * 0.15});
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation: floatSymbol ${15 + Math.random() * 20}s linear infinite;
+            animation-delay: -${Math.random() * 20}s;
+        `;
+        container.appendChild(symbol);
+    }
+    
+    document.body.appendChild(container);
+    
+    // Agregar CSS para la animación
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes floatSymbol {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(style);
 }
 
 /* ===================================
